@@ -7,7 +7,7 @@
         <el-button class="shanghu" @click.native="sh">商户账户管理</el-button>
         <div @mouseenter="mouseru" @mouseleave="mousechu">
           <el-button class="shanghu1">十月大神</el-button>
-          <div class="hides" v-show="showhide">
+          <div class="hides" v-if="showhide">
             <el-row class="top">
               <el-col :span="4" :offset="1">
                 <h5>账户信息</h5>
@@ -21,11 +21,11 @@
             <p>登录地区:广东省广州市(IP:183.18.18.31)</p>
           </div>
         </div>
-        <div @mouseenter="mouseru1" @mouseleave="mousechu1">
+        <div @mouseenter="mouseru1" >
           <el-badge :value="3" class="item">
-            <i class="el-icon-message-solid"  ></i>
+            <i class="el-icon-message-solid"></i>
           </el-badge>
-          <div class="shows" v-show="hideshow">
+             <div class="shows" v-if="hideshow"  @mouseleave="mousechu1">
               <ul>
                   <li>您有3笔外卖订单未接单<br><span>2018-12-28 09:18:00</span></li>
                   <li>您有1笔上门服务订单未接单<br><span>2018-12-28 09:18:00</span></li>

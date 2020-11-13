@@ -26,7 +26,9 @@
       <el-button
         type="warning"
         @click.native="cx"
-        style="background:rgb(255,136,0);margin: 0 0 0 339px;"
+        style="position: absolute;
+    background: rgb(255, 136, 0);
+    right: 290px;"
       >查询</el-button>
       <div class="tb">
         <div class="flex1">
@@ -181,7 +183,8 @@
       :page-sizes="[100, 200, 300, 400]"
       :page-size="100"
       layout="total, sizes, prev, pager, next, jumper"
-      :total="4000" style="padding: 16px 0 0 248px;">
+      :total="4000" style="padding: 16px 0px 0px 205px;
+    margin-bottom: 16px">
     </el-pagination>
   </div>
       </div>

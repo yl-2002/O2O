@@ -26,7 +26,9 @@
       <el-button
         type="warning"
         @click.native="cx"
-        style="background:rgb(255,136,0);margin: 0 0 0 339px;"
+        style="position: absolute;
+    background: rgb(255, 136, 0);
+    right: 290px;"
       >查询</el-button>
       <div class="tb">
         <div class="flex1">
@@ -59,7 +61,7 @@
           <p style="color:rgb(255, 136, 0)">待收货</p>
           <p>1</p>
           <p>
-            <el-button type="success" size="small"  @click.native="xiangqing">详情</el-button>
+            <el-button type="success" size="small" @click.native="xiangqing">详情</el-button>
           </p>
         </div>
         <div class="flex2">
@@ -84,7 +86,12 @@
           <p style="color:rgb(255, 136, 0)">待收货</p>
           <p>1</p>
           <p>
-            <el-button type="success" size="small" style="    margin-top: 154px;" @click.native="xiangqing">详情</el-button>
+            <el-button
+              type="success"
+              size="small"
+              style="    margin-top: 154px;"
+              @click.native="xiangqing"
+            >详情</el-button>
           </p>
         </div>
         <div class="flex3" style="border-bottom:none">
@@ -118,11 +125,11 @@
           <p>
             <el-button
               type="primary"
-             @click.native="fahuo"
+              @click.native="fahuo"
               size="small"
               style=" 
     margin-bottom: 132px;
-"           
+"
             >发货</el-button>
           </p>
         </div>
@@ -223,7 +230,7 @@
           <p style="color:rgb(255, 136, 0)">待收货</p>
           <p>1</p>
           <p>
-            <el-button type="success" size="small"  @click.native="xiangqing" >详情</el-button>
+            <el-button type="success" size="small" @click.native="xiangqing">详情</el-button>
           </p>
         </div>
 
@@ -249,7 +256,7 @@
           <p style="color:rgb(255, 136, 0)">待收货</p>
           <p>1</p>
           <p>
-            <el-button type="success" size="small"  @click.native="xiangqing">详情</el-button>
+            <el-button type="success" size="small" @click.native="xiangqing">详情</el-button>
           </p>
         </div>
         <div class="block">
@@ -261,12 +268,12 @@
             :page-size="100"
             layout="total, sizes, prev, pager, next, jumper"
             :total="4000"
-            style="padding: 16px 0 0 248px;"
+            style="padding: 16px 0px 0px 205px;
+    margin-bottom: 16px"
           ></el-pagination>
         </div>
       </div>
       <el-dialog title="详情" :visible.sync="list_xq">
-
         <div style="border-top:1px solid gainsboro" class="ddd">下单时间：2018-12-12 21:20:20</div>
         <div class="ddd">下单会员：十月大神</div>
         <div class="ddd">商品总价：￥2800</div>
@@ -321,40 +328,21 @@
         </table>
       </el-dialog>
       <el-dialog title="发货信息" :visible.sync="list_xq1">
-        <el-table
-         border
+       <el-table
     ref="multipleTable"
     :data="tableData"
     tooltip-effect="dark"
     style="width: 100%"
-    
     @selection-change="handleSelectionChange">
-    <el-table-column
-      type="selection"
-      width="55">
-    </el-table-column>
-    <el-table-column
-      label="商品名称"
-      width="120">
-      <template slot-scope="scope">{{ scope.row.date }}</template>
-    </el-table-column>
-    <el-table-column
-      prop="name"
-      label="结算单价"
-      width="120">
-    </el-table-column>
-    <el-table-column
-      prop="address"
-      label="数量"
-      show-overflow-tooltip>
-    </el-table-column>
-    <el-table-column
-      prop="sum"
-      label="总价"
-      show-overflow-tooltip>
-    </el-table-column>
-  </el-table>
-   <table class="tabs">
+          <el-table-column type="selection" width="55"></el-table-column>
+          <el-table-column label="商品名称" width="120">
+            <template slot-scope="scope">{{ scope.row.date }}</template>
+          </el-table-column>
+          <el-table-column prop="name" label="结算单价" width="120"></el-table-column>
+          <el-table-column prop="address" label="数量" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="sum" label="总价" show-overflow-tooltip></el-table-column>
+        </el-table>
+        <table class="tabs">
           <tr>
             <td>发货人</td>
             <td>结算合计</td>
@@ -365,28 +353,37 @@
           <tr>
             <td>xxx</td>
             <td>￥500</td>
-            <td>十月大神，18800000000，广东省广州市越秀区东园横路1号</td>
+            <td>
+              十月大神，
+              <br />18800000000，广东省广州市越秀区东园横路1号
+            </td>
             <td>顺丰</td>
             <td>快递</td>
           </tr>
           <tr>
             <td>xxx</td>
             <td>￥500</td>
-            <td>十月大神，18800000000，广东省广州市越秀区东园横路1号</td>
+            <td>
+              十月大神，
+              <br />18800000000，广东省广州市越秀区东园横路1号
+            </td>
             <td>顺丰</td>
             <td>快递</td>
           </tr>
           <tr>
             <td>xxx</td>
             <td>￥500</td>
-            <td>十月大神，18800000000，广东省广州市越秀区东园横路1号</td>
+            <td>
+              十月大神，
+              <br />18800000000，广东省广州市越秀区东园横路1号
+            </td>
             <td>顺丰</td>
             <td>快递</td>
           </tr>
         </table>
-  <div slot="footer" class="dialog-footer">
-    <el-button type="primary" @click.native="tcc">确 定</el-button>
-  </div>
+        <div slot="footer" class="dialog-footer">
+          <el-button type="primary" @click.native="tcc">确 定</el-button>
+        </div>
       </el-dialog>
     </div>
   </div>
@@ -400,45 +397,63 @@ export default {
       input2: "",
       msg: "全部",
       list_xq: false,
-      list_xq1:false,
-         tableData: [{
-          date: '商城商品名称',
-          name: '￥250',
-          address: '2',
-          sum:'￥500'
-        }, {
-          date: '商城商品名称',
-          name: '￥500',
-          address: '1',
-          sum:'￥500'
-        }],
-          form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
+      list_xq1: false,
+      tableData: [
+        {
+          date: "商城商品名称",
+          name: "￥250",
+          address: "2",
+          sum: "￥500",
         },
+        {
+          date: "商城商品名称",
+          name: "￥500",
+          address: "1",
+          sum: "￥500",
+        },
+      ],
+      form: {
+        name: "",
+        region: "",
+        date1: "",
+        date2: "",
+        delivery: false,
+        type: [],
+        resource: "",
+        desc: "",
+      },
+      multipleSelection: [],
     };
   },
   methods: {
+     handleSelectionChange(val) {
+      this.multipleSelection = val;
+    
+    },
     xiangqing() {
       this.list_xq = true;
     },
-    tcc(){
-         this.$alert('发货成功', '提示', {
-          confirmButtonText: '确定',
-          callback: action => {
+
+    tcc() {
+      if(this.multipleSelection.length==0){
+       this.$alert("请选择您发货", "提示", {
+        confirmButtonText: "确定",
+        callback: (action) => {
           this.list_xq1 = false;
-          }
-        });
+        },
+      });
+      }
+      this.$alert("发货成功", "提示", {
+        confirmButtonText: "确定",
+        callback: (action) => {
+          this.list_xq1 = false;
+        },
+      });
     },
-    fahuo(){
-    this.list_xq1=true
+    fahuo() {
+      this.list_xq1 = true;
     },
+
     qb() {
       this.msg = "全部";
     },
@@ -455,26 +470,25 @@ export default {
 };
 </script>
 <style scoped>
-
-.box>>>.el-form{
-    border: 1px solid gainsboro;
+.box >>> .el-form {
+  border: 1px solid gainsboro;
 }
 
-.box>>>.dialog-footer .el-button--primary {
-    background-color: rgb(255, 136, 0);
-    border-color: rgb(255, 136, 0);
+.box >>> .dialog-footer .el-button--primary {
+  background-color: rgb(255, 136, 0);
+  border-color: rgb(255, 136, 0);
 }
-.box>>> .el-checkbox__inner:hover{
-    border-color:rgb(255, 136, 0);
+.box >>> .el-checkbox__inner:hover {
+  border-color: rgb(255, 136, 0);
 }
 
-.box>>> .el-checkbox__input.is-indeterminate .el-checkbox__inner{
-            background-color: rgb(255, 136, 0);
-    border-color:rgb(255, 136, 0);
+.box >>> .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: rgb(255, 136, 0);
+  border-color: rgb(255, 136, 0);
 }
-.box>>>.el-checkbox__input.is-checked .el-checkbox__inner{
-        background-color: rgb(255, 136, 0);
-    border-color:rgb(255, 136, 0);
+.box >>> .el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: rgb(255, 136, 0);
+  border-color: rgb(255, 136, 0);
 }
 .tabs {
   margin-top: 20px;
@@ -490,7 +504,7 @@ export default {
   width: 30%;
   border-radius: 10px;
 }
-.box >>> .el-dialog__body .ddd{
+.box >>> .el-dialog__body .ddd {
   border: 1px solid gainsboro;
   height: 40px;
   line-height: 40px;
