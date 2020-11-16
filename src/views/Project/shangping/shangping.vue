@@ -3,7 +3,7 @@
     <div class="nav_top">
       <p class="pj1">
         <span>
-          <a style="margin-left: 9px;">团购</a>
+          <a style="margin-left: 9px;">商品</a>
         </span>
       </p>
     </div>
@@ -244,9 +244,54 @@
               <el-col :span="3">商品分类</el-col>
               <el-col :span="6">操作</el-col>
             </el-row>
-            <div style="    width: 97px;
-    margin: 34px auto 0;
-    font-size: 12px;">没有相关数据</div>
+         <el-row :gutter="1" class="top">
+              <el-col :span="3">1001</el-col>
+              <el-col :span="6">
+                <div class="ox">
+                  <div style="    width: 95px;">
+                    <img src="../../../assets/img/tu.png" alt />
+                  </div>
+
+                  <div style="font-size:12px">
+                    团购商品名称
+                    <br />
+                    <p style="margin-top:10px ;font-weight:bold">已0人分销</p>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="3">98/68.6</el-col>
+              <el-col :span="3">12/100</el-col>
+              <el-col :span="3">暂无分类</el-col>
+              <el-col :span="6">
+                <el-button type="warning" size="mini" @click.native="ups">编辑</el-button>
+                <el-button type="primary" size="mini">下架</el-button>
+                <el-button type="info" size="mini">预览</el-button>
+              </el-col>
+            </el-row>
+             <el-row :gutter="1" class="top">
+              <el-col :span="3">1001</el-col>
+              <el-col :span="6">
+                <div class="ox">
+                  <div style="    width: 95px;">
+                    <img src="../../../assets/img/tu.png" alt />
+                  </div>
+
+                  <div style="font-size:12px">
+                    团购商品名称
+                    <br />
+                    <p style="margin-top:10px ;font-weight:bold">已0人分销</p>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="3">98/68.6</el-col>
+              <el-col :span="3">12/100</el-col>
+              <el-col :span="3">暂无分类</el-col>
+              <el-col :span="6">
+                <el-button type="warning" size="mini" @click.native="ups">编辑</el-button>
+                <el-button type="primary" size="mini">下架</el-button>
+                <el-button type="info" size="mini">预览</el-button>
+              </el-col>
+            </el-row>
           </div>
         </el-tab-pane>
         <el-tab-pane label="仓库中" name="third">
@@ -575,12 +620,12 @@ export default {
   methods: {
     cx() {
       this.$router.push({
-        path:'/tgsy/insert'
+        path:'/spgl/insert'
       });
     },
     ups(){
       this.$router.push({
-        path: "/tgsy/update",
+        path: "/spgl/update",
       });
     },
     scd(){

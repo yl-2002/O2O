@@ -72,9 +72,9 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="4-1" @click.native="tg">团购</el-menu-item>
-            <el-menu-item index="4-2">商品</el-menu-item>
-            <el-menu-item index="4-3">优惠券</el-menu-item>
-            <el-menu-item index="4-4">活动</el-menu-item>
+            <el-menu-item index="4-2" @click.native="sp">商品</el-menu-item>
+            <el-menu-item index="4-3" @click.native="sps">优惠券</el-menu-item>
+            <el-menu-item index="4-4" @click.native="hds">活动</el-menu-item>
           </el-menu-item-group>
          
      
@@ -92,10 +92,10 @@
             <span>财务管理</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="5-1">财务报表</el-menu-item>
-            <el-menu-item index="5-2">商户提现</el-menu-item>
-            <el-menu-item index="5-3">银行账户</el-menu-item>
-            <el-menu-item index="5-4">开票设置</el-menu-item>
+            <el-menu-item index="5-1" @click.native="hdss">财务报表</el-menu-item>
+            <el-menu-item index="5-2" @click.native="shtx">商户提现</el-menu-item>
+            <el-menu-item index="5-3" @click.native="user">银行账户</el-menu-item>
+            <el-menu-item index="5-4" @click.native="kps">开票设置</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -273,6 +273,46 @@ export default {
     tg(){
        this.$router.push({
         path: "/tgsy",
+      });
+    },
+     sps(){
+       this.$router.push({
+      path:'/yhqs',
+
+      });
+    },
+    sp(){
+       this.$router.push({
+      path:'/spgl',
+
+      });
+    },
+    hds(){
+       this.$router.push({
+      path:'/hdProject',
+
+      });
+    }, hdss(){
+       this.$router.push({
+      path:'/finance',
+
+      });
+    },shtx(){
+      this.$router.push({
+    path:'/shtixian'
+
+      });
+     
+    },user(){
+       this.$router.push({
+    path:'/user'
+
+      });
+    },
+    kps(){
+        this.$router.push({
+    path:'/kps'
+
       });
     }
   },

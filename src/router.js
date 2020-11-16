@@ -80,8 +80,68 @@ export default new Router({
         }, {
           path: '/tgsy',
           component: () => import('./views/Project/huodong/tg.vue')
-        }
+        },{
+          path:'/tgsy/insert',
+          component: () => import('./views/Project/huodong/insert.vue')
+        },{
+          path:'/spgl',
+          component: () => import('./views/Project/shangping/shangping.vue')
+        },{
+        path:'/tgsy/update',
+        component: () => import('./views/Project/huodong/update.vue')
+      },{
+        path:'/spgl/update',
+        component: () => import('./views/Project/shangping/update.vue')
+      },
+      {
+        path:'/spgl/insert',
+        component: () => import('./views/Project/shangping/insert.vue')
+      },
+      {
+        path:'/yhqs',
+        component: () => import('./views/Project/youhuiquan/yhqs.vue')
+      },
+      {
+        path:'/yhqs/insert_shiti',
+        component: () => import('./views/Project/youhuiquan/insert.vue')
+      },
+      {
+        path:'/yhqs/insert_dianzi',
+        component: () => import('./views/Project/youhuiquan/insert_dianzi.vue')
+      },
+      {
+        path:'/yhqs/update',
+        component: () => import('./views/Project/youhuiquan/update.vue')
+      },{
+        path:'/yhqs/update_shiti',
+        component: () => import('./views/Project/youhuiquan/update_dianzi.vue')
+      },
+      {
+        path:'/hdProject',
+        component: () => import('./views/Project/tuangou/hd.vue')
+      }
+      ,{
+        path:'/hdProject/insert',
+        component: () => import('./views/Project/tuangou/insert.vue')
+      },{
+        path:'/hdProject/update',
+        component: () => import('./views/Project/tuangou/update.vue')
+      },{
+        path:'/finance',
+        component: () => import('./views/Finance/baobiao.vue')
+      },{
+        path:'/shtixian',
+        component: () => import('./views/Finance/tixian.vue')
 
+      },{
+        path:'/user',
+        component: () => import('./views/Finance/yinhang_user.vue')
+
+      },{
+        path:'/kps',
+        component: () => import('./views/Finance/kaipiao.vue')
+
+      }
       ]
 
     },

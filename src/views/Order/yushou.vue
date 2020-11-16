@@ -210,7 +210,7 @@
         </table>
         <p
           style="border: 1px solid gainsboro;
-    width: 510px;
+    width: 511px;
     margin-top: 15px;
     padding: 11px 0 10px 17px;
     margin-bottom: -20px;"
