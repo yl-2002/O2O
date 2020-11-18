@@ -141,9 +141,61 @@ export default new Router({
         path:'/kps',
         component: () => import('./views/Finance/kaipiao.vue')
 
+      },
+      {
+        path:'/mdlist',
+        component: () => import('./views/Shop/shop_list/ulist.vue')
+      }, {
+        path:'/mdlist/insert',
+        component: () => import('./views/Shop/shop_list/insert.vue')
+      }, {
+        path:'/mdlist/update',
+        component: () => import('./views/Shop/shop_list/update.vue')
+      }, {
+        path:'/mdlist/gengxin',
+        component: () => import('./views/Shop/shop_list/gengxin.vue')
+      }, {
+        path:'/waimaiy',
+        component: () => import('./views/Shop/waimai/wai.vue')
+      }, {
+        path:'/waimaiy/jc',
+        component: () => import('./views/Shop/waimai/jichu.vue')
+      }, {
+        path:'/waimaiy/yy',
+        component: () => import('./views/Shop/waimai/yuyue.vue')
+      }, {
+        path:'/waimaiy/fl',
+        component: () => import('./views/Shop/waimai/fenlei.vue')
+      }, {
+        path:'/waimaiy/sp',
+        component: () => import('./views/Shop/waimai/shangping.vue')
+      }, {
+        path:'/shangmen',
+        component: () => import('./views/Shop/shangmen/shangmen.vue')
+      }, {
+        path:'/peisong',
+        component: () => import('./views/Shop/peisong/peisong.vue')
+      }, {
+        path:'/shangmen/shangmensz',
+        component: () => import('./views/Shop/shangmen/shang.vue')
+      }, {
+        path:'/peisongmb',
+        component: () => import('./views/Account/peisong/peisong.vue')
+      }, {
+        path:'/peisongmb/xinzeng',
+        component: () => import('./views/Account/peisong/xinzeng.vue')
+      }, {
+        path:'/peisongmb/xg',
+        component: () => import('./views/Account/peisong/bianji.vue')
+      }, {
+        path:'/zzh',
+        component: () => import('./views/Account/zizhanghu/sy.vue')
+      }, {
+        path:'/zzh/insert',
+        component: () => import('./views/Account/zizhanghu/insert.vue')
       }
       ]
-
+      
     },
 
     {

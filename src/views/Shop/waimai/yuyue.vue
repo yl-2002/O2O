@@ -1,0 +1,699 @@
+<template>
+  <div>
+    <div class="nav_top">
+      <p>
+        <span>
+          <a style="    margin-left: 9px;">预约项目设置</a>
+        </span>
+         <el-button style="position: absolute;
+    right: 182px;" size="small" @click.native="fh">返回列表</el-button>
+      </p>
+     
+    </div>
+    <div class="box">
+      <div
+        style="font-size: 12px;
+    border: 1px solid rgb(228,228,228);
+    padding: 11px 0 12px 12px;
+    background: rgb(254,251,239);"
+      >
+        温馨提示：可以点击【排序】和【状态】直接修改
+        <el-button
+          style="margin-left: 777px;"
+          type="warning"
+          size="small"
+          @click.native="dialogTableVisible=true"
+        >新增预约项目</el-button>
+      </div>
+      <div class="body">
+        <el-row class="top">
+          <el-col :span="2">编号</el-col>
+          <el-col :span="8">名称</el-col>
+          <el-col :span="3">定价</el-col>
+          <el-col :span="3">排序</el-col>
+          <el-col :span="4">状态</el-col>
+          <el-col :span="4">操作</el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input1"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input2"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input3"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input4"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input5"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input6"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de"> 删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input7"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input8"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input9"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input0"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+        <el-row class="sec">
+          <el-col :span="2">1001</el-col>
+          <el-col :span="8">预约项目1</el-col>
+          <el-col :span="3">￥68</el-col>
+          <el-col :span="3">
+            <el-input style="
+    margin-top: -10px;
+" size="small" v-model="input.input10"></el-input>
+          </el-col>
+          <el-col :span="4">
+            <el-switch
+              style="display: block"
+              v-model="value2"
+              active-color="rgb(255,136,0)"
+              inactive-color="rgb(228,228,228)"
+            ></el-switch>
+          </el-col>
+          <el-col :span="4">
+            <el-link
+              type="warning"
+              style=" color:rgb(255,136,0) ;  margin: 0 10px;
+"
+              @click.native="dialogTableVisible1=true"
+            >修改</el-link>
+            <el-link type="warning" style="color:rgb(255,136,0) ;" @click.native="de">删除</el-link>
+          </el-col>
+        </el-row>
+      </div>
+
+      <div class="foot">
+        <el-pagination
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="currentPage4"
+          :page-sizes="[100, 200, 300, 400]"
+          :page-size="100"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="4000"
+          style="padding: 16px 0px 0px 205px;
+    margin-bottom: 16px"
+        ></el-pagination>
+      </div>
+      <el-dialog title="新增项目" :visible.sync="dialogTableVisible">
+        <table class="bg" style="border-collapse:collapse;    margin-bottom: 30px;">
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">
+              <span style="color:red">*</span>项目名称：
+            </td>
+            <td class="secend">
+              <el-input size="small" style="width:70%" v-model="a"></el-input>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">
+              <span style="color:red">*</span>定金：
+            </td>
+            <td class="secend">
+              <el-input size="small" style="width:70%" v-model="i"></el-input>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">
+              <span style="color:red">*</span>时间设置：
+            </td>
+            <td class="secend">
+              <div style="font-size:12px">
+                【 + 】
+                <span style="color:rgb(255,136,0)">【添加时间配置】</span>
+              </div>
+              <el-row class="top_s">
+                <el-col :span="9">时间</el-col>
+                <el-col :span="5">数量</el-col>
+                <el-col :span="5">状态</el-col>
+                <el-col :span="5">操作</el-col>
+              </el-row>
+              <el-row class="top_ss">
+                <el-col :span="9">
+                  <el-input style="width:70%" size="small" v-model="sss"></el-input>
+                </el-col>
+                <el-col :span="5">
+                  <el-input style="margin-left:5px" size="small" v-model="ss1"></el-input>
+                </el-col>
+                <el-col :span="5">
+                  <el-switch
+                    style="display: block"
+                    v-model="value"
+                    active-color="rgb(255,136,0)"
+                    inactive-color="rgb(226,226,226)"
+                  ></el-switch>
+                </el-col>
+                <el-col :span="5"></el-col>
+              </el-row>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">项目备注：</td>
+            <td class="secend">
+              <el-input
+                size="small"
+                style="width:70%"
+                v-model="s"
+                placeholder="15字以内"
+                maxlength="15"
+              ></el-input>
+            </td>
+          </tr>
+        </table>
+      </el-dialog>
+
+      <el-dialog title="编辑项目" :visible.sync="dialogTableVisible1">
+        <table class="bg" style="border-collapse:collapse;    margin-bottom: 30px;">
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">
+              <span style="color:red">*</span>项目名称：
+            </td>
+            <td class="secend">
+              <el-input size="small" style="width:70%" v-model="aq"></el-input>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">
+              <span style="color:red">*</span>定金：
+            </td>
+            <td class="secend">
+              <el-input size="small" style="width:70%" v-model="iq"></el-input>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">
+              <span style="color:red">*</span>时间设置：
+            </td>
+            <td class="secend">
+              <div style="font-size:12px">
+                【 + 】
+                <span style="color:rgb(255,136,0)">【添加时间配置】</span>
+              </div>
+              <el-row class="top_s">
+                <el-col :span="9">时间</el-col>
+                <el-col :span="5">数量</el-col>
+                <el-col :span="5">状态</el-col>
+                <el-col :span="5">操作</el-col>
+              </el-row>
+              <el-row class="top_ss">
+                <el-col :span="9">
+                  <el-input style="width:70%" size="small" v-model="sssq"></el-input>
+                </el-col>
+                <el-col :span="5">
+                  <el-input style="margin-left:5px" size="small" v-model="ss1q"></el-input>
+                </el-col>
+                <el-col :span="5">
+                  <el-switch
+                    style="display: block"
+                    v-model="value"
+                    active-color="rgb(255,136,0)"
+                    inactive-color="rgb(226,226,226)"
+                  ></el-switch>
+                </el-col>
+                <el-col :span="5"></el-col>
+              </el-row>
+              <el-row class="top_ss">
+                <el-col :span="9">
+                  <el-input style="width:70%" size="small" v-model="sssf"></el-input>
+                </el-col>
+                <el-col :span="5">
+                  <el-input style="margin-left:5px" size="small" v-model="ss1f"></el-input>
+                </el-col>
+                <el-col :span="5">
+                  <el-switch
+                    style="display: block"
+                    v-model="valuev"
+                    active-color="rgb(255,136,0)"
+                    inactive-color="rgb(226,226,226)"
+                  ></el-switch>
+                </el-col>
+                <el-col :span="5"></el-col>
+              </el-row>
+            </td>
+          </tr>
+          <tr>
+            <td style="background:rgb(250,250,250)" class="first">项目备注：</td>
+            <td class="secend">
+              <el-input
+                size="small"
+                style="width:70%"
+                v-model="vs"
+                placeholder="15字以内"
+                maxlength="15"
+              ></el-input>
+            </td>
+          </tr>
+        </table>
+      </el-dialog>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "shouye",
+  data() {
+    return {
+      value: true,
+      value2: true,
+      valuev: true,
+      a: "",
+      i: "",
+      s: "",
+      sss: "",
+      ss1: "",
+       aq: "帝王蟹一盘",
+      iq: "100",
+      vs: "",
+      sssf: "12:00:00",
+      ss1f: "5",
+      dialogTableVisible: false,
+      dialogTableVisible1: false,
+      input: {
+        input: "10",
+        input1: "10",
+        input2: "10",
+        input3: "10",
+        input4: "10",
+        input5: "10",
+        input6: "10",
+        input7: "10",
+        input8: "10",
+        input9: "10",
+        input0: "10",
+        input10: "10",
+      },
+    };
+  },
+  methods: {
+      fh(){
+        this.$router.push({
+              path:'/waimaiy'
+          })
+      },
+      de(){
+          this.$confirm('确认删除?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$message({
+            type: 'success',
+            message: '删除成功!'
+          });
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          });          
+        });
+      }
+  },
+};
+</script>
+<style scoped>
+.el-main {
+  padding: 0 !important;
+  min-height: 1000px;
+  margin: 60px 0 0 -61px;
+  background: rgb(242, 242, 242);
+}
+.top_s {
+  border-bottom: none;
+  border: 1px solid rgb(228, 228, 228);
+  background: rgb(242, 242, 242);
+  text-align: center;
+  padding: 7px 0;
+  margin-top: 10px;
+}
+.box >>> .el-dialog__header {
+  background-color: rgb(255, 136, 0);
+}
+.top_ss {
+  border-top: none;
+  border: 1px solid rgb(228, 228, 228);
+  text-align: center;
+  padding: 10px 0;
+}
+.box >>> .el-dialog__title {
+  color: white;
+}
+.box >>> .el-dialog__headerbtn .el-dialog__close {
+  color: white;
+}
+.foot >>> .el-pager li:hover {
+  color: rgb(255, 136, 0);
+}
+.foot >>> .el-pager li.active {
+  color: rgb(255, 136, 0);
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #000;
+}
+.bg tr td {
+  border: 1px solid rgb(215, 215, 215);
+  padding: 20px 10px;
+  font-size: 12px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.first {
+  width: 180px;
+  text-align: right;
+}
+.secend {
+  width: 400px;
+}
+.box >>> .el-dialog {
+  width: 600px;
+}
+.el-main p {
+  padding: 7px 0 7px 165px;
+  height: 36px;
+  text-indent: 17px;
+  background: white;
+  line-height: 36px;
+}
+.el-main p span {
+  line-height: 1.7;
+  border-left: 3px solid rgb(255, 136, 0);
+}
+.box {
+  padding: 29px 60px 1px 60px;
+  background: white;
+  min-height: 500px;
+  width: 1185px;
+  margin: 34px auto;
+}
+.box h2 {
+  margin: 0 0 0 327px;
+}
+.top {
+  text-align: center;
+  padding: 13px 0;
+  background: rgb(242, 242, 242);
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+.sec {
+  text-align: center;
+  padding: 13px 0;
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+.sec >>> .el-col {
+  margin-top: 6px;
+}
+.sec:last-of-type {
+  border-bottom: none;
+}
+.body {
+  font-size: 14px;
+  margin-top: 20px;
+  border: 1px solid rgb(228, 228, 228);
+  border-bottom: none;
+  min-height: 100px;
+}
+
+.foot {
+  margin: 0 0 20px 0;
+  border-top: none;
+  border: 1px solid rgb(228, 228, 228);
+}
+</style>

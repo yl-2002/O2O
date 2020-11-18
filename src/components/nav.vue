@@ -111,10 +111,10 @@
             <span>门店管理</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="6-1">门店列表</el-menu-item>
-            <el-menu-item index="6-2">外卖预定设置</el-menu-item>
-            <el-menu-item index="6-1">上门服务设置</el-menu-item>
-            <el-menu-item index="6-2">配送设置</el-menu-item>
+            <el-menu-item index="6-1" @click.native="mdlist">门店列表</el-menu-item>
+            <el-menu-item index="6-2" @click.native="wm">外卖预定设置</el-menu-item>
+            <el-menu-item index="6-3" @click.native="sm">上门服务设置</el-menu-item>
+            <el-menu-item index="6-4"  @click.native="pssz">配送设置</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -130,8 +130,8 @@
             <span>账户管理</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="7-1">配送模板</el-menu-item>
-            <el-menu-item index="7-2">子账户管理</el-menu-item>
+            <el-menu-item index="7-1" @click.native="peisongmb">配送模板</el-menu-item>
+            <el-menu-item index="7-2"  @click.native="zhs">子账户管理</el-menu-item>
             <el-menu-item index="7-3">快递列表</el-menu-item>
             <el-menu-item index="7-4">微店设置</el-menu-item>
           </el-menu-item-group>
@@ -199,6 +199,12 @@
 <script>
 export default {
   methods: {
+    zhs(){
+      this.$router.push({
+             path:'/zzh',
+
+      });
+    },
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
@@ -312,6 +318,32 @@ export default {
     kps(){
         this.$router.push({
     path:'/kps'
+
+      });
+    },
+    mdlist(){
+      this.$router.push({
+    path:'/mdlist'
+
+      });
+    }, wm(){
+      this.$router.push({
+    path:'/waimaiy'
+
+      });
+    },sm(){
+      this.$router.push({
+    path:'/shangmen'
+
+      });
+    },pssz(){
+        this.$router.push({
+    path:'/peisong',
+
+      });
+    },peisongmb(){
+        this.$router.push({
+    path:'/peisongmb',
 
       });
     }
