@@ -1,0 +1,215 @@
+<template>
+  <div>
+    <div class="nav_top">
+      <p class="pj1">
+        <span>
+          <a style="    margin-left: 9px;">催账</a>
+        </span>
+      </p>
+    </div>
+    <div class="box">
+      <el-input placeholder="下单起始日期" v-model="input" clearable size="small"></el-input>
+      <i>-</i>
+      <el-input placeholder="下单截至日期" v-model="input1" clearable size="small"></el-input>
+      <el-input placeholder="请输入商品名..." v-model="input2" clearable size="small"></el-input>
+      <el-button
+        type="warning"
+         size="small"
+        @click.native="cx"
+        style="position: absolute;
+    background: rgb(255, 136, 0);
+    right: 290px;"
+      >查询</el-button>
+      <div class="tb">
+       <el-row class="top">
+           <el-col :span="4">门店</el-col>
+           <el-col :span="4">订单号</el-col>
+           <el-col :span="3">联系人</el-col>
+           <el-col :span="3">电话</el-col>
+           <el-col :span="6">配送地址</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">催单时间</el-col>
+       </el-row>
+        <el-row class="dd">
+           <el-col :span="4">花生米科技公司（越秀店）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市越秀区东园横路1号</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司（越秀店）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市越秀区东园横路1号</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司（越秀店）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市越秀区东园横路1号</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司（越秀店）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市越秀区东园横路1号</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司（越秀店）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市越秀区东园横路1号</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司总部</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市天河区天河大厦601室</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司总部</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市天河区天河大厦601室</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司总部）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市天河区天河大厦601室</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司（越秀店）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市越秀区东园横路1号</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+
+         <el-row class="dd">
+           <el-col :span="4">花生米科技公司（越秀店）</el-col>
+           <el-col :span="4">2018122800300557</el-col>
+           <el-col :span="3">￥15</el-col>
+           <el-col :span="3">￥0</el-col>
+           <el-col :span="6">广州市越秀区东园横路1号</el-col>
+           <el-col style="border-right: 1px solid rgb(228,228,228);" :span="4">2018-12-12 12:00:12</el-col>
+       </el-row>
+        <div class="foot">
+              <el-pagination
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="currentPage4"
+                :page-sizes="[100, 200, 300, 400]"
+                :page-size="100"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="4000"
+                style="padding: 16px 0px 0px 205px;
+    margin-bottom: 16px"
+              ></el-pagination>
+            </div>
+      </div>
+     
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      input: "",
+      input1: "",
+      input2: "",
+      msg: "全部",
+     
+    };
+  },
+  methods: {
+ 
+    cx() {
+      this.$router.go(0);
+    },
+  },
+};
+</script>
+<style scoped>
+.foot >>> .el-pager li:hover {
+  color: rgb(255, 136, 0);
+}
+.foot >>> .el-pager li.active {
+  color: rgb(255, 136, 0);
+}
+ .el-dropdown-link {
+    cursor: pointer;
+    color: #000;
+  }
+.tb {
+
+    width: 1100px;
+    min-height: 200px;
+    margin: 35px 0 4px 16px;
+
+}
+.top{
+    text-align: center;
+    font-size: 14px;
+    background: rgb(242,242,242);
+}
+.top>>>.el-col{
+        padding: 7px 0;
+        border: 1px solid rgb(228,228,228);
+    border-right: none;
+}
+.box {
+  padding: 29px 0 1px 60px;
+  background: white;
+  min-height: 100px;
+  width: 1185px;
+  margin: 34px auto;
+}
+.dd{
+    font-size: 12px;
+    text-align: center;
+}
+.dd>>>.el-col{
+    padding: 10px 0;
+    border: 1px solid rgb(228,228,228);
+    border-top: none;
+    border-right: none;
+}
+.pj1 {
+  padding: 7px 0 7px 191px;
+  height: 36px;
+  text-indent: 17px;
+  background: white;
+  line-height: 36px;
+}
+.pj1 span {
+  line-height: 1.7;
+  border-left: 3px solid rgb(255, 136, 0);
+}
+.el-input {
+  margin: 0 20px;
+  width: 141px;
+  height: 31px;
+}
+.box >>> .el-input__inner:focus {
+  border-color: rgb(255, 136, 0);
+  outline: 0;
+}
+</style>

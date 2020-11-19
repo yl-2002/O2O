@@ -76,8 +76,6 @@
             <el-menu-item index="4-3" @click.native="sps">优惠券</el-menu-item>
             <el-menu-item index="4-4" @click.native="hds">活动</el-menu-item>
           </el-menu-item-group>
-         
-     
         </el-submenu>
       </el-menu>
       <el-menu
@@ -114,7 +112,7 @@
             <el-menu-item index="6-1" @click.native="mdlist">门店列表</el-menu-item>
             <el-menu-item index="6-2" @click.native="wm">外卖预定设置</el-menu-item>
             <el-menu-item index="6-3" @click.native="sm">上门服务设置</el-menu-item>
-            <el-menu-item index="6-4"  @click.native="pssz">配送设置</el-menu-item>
+            <el-menu-item index="6-4" @click.native="pssz">配送设置</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -131,9 +129,9 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="7-1" @click.native="peisongmb">配送模板</el-menu-item>
-            <el-menu-item index="7-2"  @click.native="zhs">子账户管理</el-menu-item>
-            <el-menu-item index="7-3">快递列表</el-menu-item>
-            <el-menu-item index="7-4">微店设置</el-menu-item>
+            <el-menu-item index="7-2" @click.native="zhs">子账户管理</el-menu-item>
+            <el-menu-item index="7-3" @click.native="kd">快递列表</el-menu-item>
+            <el-menu-item index="7-4" @click.native="wd">微店设置</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -149,8 +147,8 @@
             <span>营销管理</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="8-1">满免运费</el-menu-item>
-            <el-menu-item index="8-2">商品预售</el-menu-item>
+            <el-menu-item index="8-1" @click.native="mm">满免运费</el-menu-item>
+            <el-menu-item index="8-2" @click.native="spys">商品预售</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -166,14 +164,14 @@
             <span>外卖预定管理</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="9-1">外卖订单</el-menu-item>
-            <el-menu-item index="9-2">预定订单</el-menu-item>
-            <el-menu-item index="9-3">异常外卖订单</el-menu-item>
-            <el-menu-item index="9-4">对账单</el-menu-item>
-            <el-menu-item index="9-5">催单记录</el-menu-item>
-            <el-menu-item index="9-6">预定电子券验证</el-menu-item>
+            <el-menu-item index="9-1" @click.native="wydd">外卖订单</el-menu-item>
+            <el-menu-item index="9-2" @click.native="yddd">预定订单</el-menu-item>
+            <el-menu-item index="9-3" @click.native="ycdd">异常外卖订单</el-menu-item>
+            <el-menu-item index="9-4" @click.native="dzd">对账单</el-menu-item>
+            <el-menu-item index="9-5" @click.native="czjl">催单记录</el-menu-item>
+            <el-menu-item index="9-6" @click.native="yzyhq">预定电子券验证</el-menu-item>
           </el-menu-item-group>
-        </el-submenu>
+        </el-submenu> 
       </el-menu>
       <el-menu
         default-active="10"
@@ -199,10 +197,50 @@
 <script>
 export default {
   methods: {
-    zhs(){
+    dzd(){
       this.$router.push({
-             path:'/zzh',
+        path: "/dzd",
+      });
+    },
+    czjl(){
+      this.$router.push({
+        path: "/czjl",
+      });
+    },
+    ycdd(){
+      this.$router.push({
+        path: "/ycdd",
+      });
+    },
+    yddd(){
+       this.$router.push({
+        path: "/yddd",
+      });
+    },
+    wydd(){
+  this.$router.push({
+        path: "/waimdd",
+      });
+    },
+    spys() {
+      this.$router.push({
+        path: "/spys",
+      });
+    },
+    mm() {
+      this.$router.push({
+        path: "/manmina",
+      });
+    },
 
+    zhs() {
+      this.$router.push({
+        path: "/zzh",
+      });
+    },
+    wd() {
+      this.$router.push({
+        path: "/wd",
       });
     },
     handleOpen(key, keyPath) {
@@ -210,6 +248,11 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    kd() {
+      this.$router.push({
+        path: "/kd",
+      });
     },
     yzcj() {
       this.$router.push({
@@ -276,77 +319,71 @@ export default {
         path: "/yhqpl",
       });
     },
-    tg(){
-       this.$router.push({
+    tg() {
+      this.$router.push({
         path: "/tgsy",
       });
     },
-     sps(){
-       this.$router.push({
-      path:'/yhqs',
-
+    sps() {
+      this.$router.push({
+        path: "/yhqs",
       });
     },
-    sp(){
-       this.$router.push({
-      path:'/spgl',
-
+    sp() {
+      this.$router.push({
+        path: "/spgl",
       });
     },
-    hds(){
-       this.$router.push({
-      path:'/hdProject',
-
-      });
-    }, hdss(){
-       this.$router.push({
-      path:'/finance',
-
-      });
-    },shtx(){
+    hds() {
       this.$router.push({
-    path:'/shtixian'
-
-      });
-     
-    },user(){
-       this.$router.push({
-    path:'/user'
-
+        path: "/hdProject",
       });
     },
-    kps(){
-        this.$router.push({
-    path:'/kps'
-
+    hdss() {
+      this.$router.push({
+        path: "/finance",
       });
     },
-    mdlist(){
+    shtx() {
       this.$router.push({
-    path:'/mdlist'
-
+        path: "/shtixian",
       });
-    }, wm(){
+    },
+    user() {
       this.$router.push({
-    path:'/waimaiy'
-
+        path: "/user",
       });
-    },sm(){
+    },
+    kps() {
       this.$router.push({
-    path:'/shangmen'
-
+        path: "/kps",
       });
-    },pssz(){
-        this.$router.push({
-    path:'/peisong',
-
+    },
+    mdlist() {
+      this.$router.push({
+        path: "/mdlist",
       });
-    },peisongmb(){
-        this.$router.push({
-    path:'/peisongmb',
-
+    },
+    wm() {
+      this.$router.push({
+        path: "/waimaiy",
       });
-    }
+    },
+    sm() {
+      this.$router.push({
+        path: "/shangmen",
+      });
+    },
+    pssz() {
+      this.$router.push({
+        path: "/peisong",
+      });
+    },
+    peisongmb() {
+      this.$router.push({
+        path: "/peisongmb",
+      });
+    },
   },
 };
 </script>

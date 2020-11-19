@@ -63,9 +63,9 @@
             ></el-switch>
           </el-col>
           <el-col :span="5" class="s">
-            <el-link>权限设置</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>修改</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>删除</el-link>
+            <el-link @click.native="qx">权限设置</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="xg">修改</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="sc">删除</el-link>
           </el-col>
         </el-row>
          <el-row class="bodys">
@@ -90,17 +90,15 @@
             ></el-switch>
           </el-col>
           <el-col :span="5" class="s">
-            <el-link>权限设置</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>修改</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>删除</el-link>
+            <el-link @click.native="qx">权限设置</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="xg">修改</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="sc">删除</el-link>
           </el-col>
         </el-row>
          <el-row class="bodys">
           <el-col :span="3" class="s">18888888888</el-col>
           <el-col :span="6" style="margin:10px 0">
             花生米科技公司总部
-
-
             <br />
           </el-col>
           <el-col :span="5" class="s">总经理</el-col>
@@ -113,9 +111,9 @@
             ></el-switch>
           </el-col>
           <el-col :span="5" class="s">
-            <el-link>权限设置</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>修改</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>删除</el-link>
+            <el-link @click.native="qx">权限设置</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="xg">修改</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="sc">删除</el-link>
           </el-col>
         </el-row>
          <el-row class="bodys" style="border-bottom:1px solid rgb(228,228,228)">
@@ -136,9 +134,9 @@
             ></el-switch>
           </el-col>
           <el-col :span="5" class="s">
-            <el-link>权限设置</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>修改</el-link>&nbsp;&nbsp;&nbsp;
-            <el-link>删除</el-link>
+            <el-link @click.native="qx">权限设置</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="xg">修改</el-link>&nbsp;&nbsp;&nbsp;
+            <el-link @click.native="sc">删除</el-link>
           </el-col>
         </el-row>
       </div>
@@ -161,9 +159,23 @@ export default {
     };
   },
   methods: {
+    sc(){
+          this.$alert('删除成功', '提示', {
+          confirmButtonText: '确定',
+        });
+    },
+    xg(){
+         this.$router.push({
+                path:'/zzh/xg',
+          })
+    },
       xzz(){
           this.$router.push({
                 path:'/zzh/insert',
+          })
+      },qx(){
+          this.$router.push({
+                path:'/zzh/qx',
           })
       }
   },

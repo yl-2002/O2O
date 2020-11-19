@@ -193,6 +193,42 @@ export default new Router({
       }, {
         path:'/zzh/insert',
         component: () => import('./views/Account/zizhanghu/insert.vue')
+      }, {
+        path:'/zzh/qx',
+        component: () => import('./views/Account/zizhanghu/quanxian.vue')
+      }, {
+        path:'/zzh/xg',
+        component: () => import('./views/Account/zizhanghu/xiugai.vue')
+      }, {
+        path:'/kd',
+        component: () => import('./views/Account/kuaidi/kuaidi.vue')
+      },{
+        path:'/wd',
+        component: () => import('./views/Account/weidian/wd.vue')
+      },{
+        path:'/manmina',
+        component: () => import('./views/Marketing/manmian.vue')
+      },{
+        path:'/spys',
+        component: () => import('./views/Marketing/shangping/shangping.vue')
+      },{
+        path:'/waimdd',
+        component: () => import('./views/Reserve/waimai.vue')
+      },{
+        path:'/spys/bj',
+        component: () => import('./views/Marketing/shangping/bj.vue')
+      },{
+        path:'/yddd',
+        component: () => import('./views/Reserve/yuding.vue')
+      },{
+        path:'/ycdd',
+        component: () => import('./views/Reserve/yichang.vue')
+      },{
+        path: "/czjl",
+        component: () => import('./views/Reserve/cuizhang.vue')
+      },{
+        path: "/dzd",
+        component: () => import('./views/Reserve/zhangdan.vue')
       }
       ]
       
