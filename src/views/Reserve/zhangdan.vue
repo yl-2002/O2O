@@ -3,7 +3,7 @@
     <div class="nav_top">
       <p class="pj1">
         <span>
-          <a style="    margin-left: 9px;">催账</a>
+          <a style="    margin-left: 9px;">对账单</a>
         </span>
       </p>
     </div>
@@ -11,9 +11,9 @@
       <div class="ss">
         <p style=" margin-bottom: 22px;">
           销售金额：
-          <span style="color:Red">￥2000</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未确认：
-          <span style="color:Red">￥750</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 已完成：
-          <span style="color:Red">￥1200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>退款/取消订单：
+          <span style="color:Red">￥2000</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未确认：
+          <span style="color:Red">￥750</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 已完成：
+          <span style="color:Red">￥1200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 退款/取消订单：
           <span style="color:Red">￥50</span>
         </p>
         <p>注：以上数据统计的是所有订单销售金额，商户最终结算费用以每个订单的结算价为准，货到付款/到店支付不产生结算价</p>
@@ -37,7 +37,6 @@
     left: 214px;
 ">
     <el-option
-       @change="selectChange()"
       v-for="item in options"
       :key="item.value"
       :label="item.label"
@@ -54,7 +53,7 @@
       >查询</el-button>
       </div>
       
-      <div class="tb" v-show="a">
+      <div class="tb">
         <el-row class="top">
           <el-col :span="4">门店</el-col>
           <el-col :span="4">订单号</el-col>
@@ -158,15 +157,6 @@
           ></el-pagination>
         </div>
       </div>
-      <div class="tb" v-show="b">
-1
-      </div>
-       <div class="tb" v-show="c">
-2
-      </div>
-       <div class="tb" v-show="d">
-3
-      </div>
     </div>
   </div>
 </template>
@@ -176,10 +166,7 @@ export default {
     return {
       input: "",
       input1: "",
-      a:true,
-      b:false,
-      c:false,
-      d:false,
+    
       input2: "",
       msg: "全部",
          options: [{
@@ -202,9 +189,7 @@ export default {
     cx() {
       this.$router.go(0);
     },
-   selectChange(item) {    
-       console.log(item)
-        },
+
   },
 };
 </script>

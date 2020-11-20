@@ -248,7 +248,7 @@
           <el-input v-model="sda" size="small" placeholder="商品名称或id"></el-input>
           <el-button size="small" style="background:rgb(255,136,0);color:white">查询</el-button>
         </div>
-        <el-table :data="gridData" class="ts">
+        <el-table :data="gridData" class="ts"  highlight-current-row >
           <el-table-column property="date" label="商品id" width="200"></el-table-column>
           <el-table-column property="name" label="商品名称" width="400"></el-table-column>
         </el-table>
@@ -534,9 +534,14 @@ export default {
       this.multipleSelection = val;
     },
  qds(){
-        this.$router.push({
-             path:'/spys',
-        })
+   this.$alert('添加成功', '提示', {
+          confirmButtonText: '确定',
+          callback: action => {
+          this.dialogTableVisible=false
+          }
+        });
+  
+       
  }
   },
 };
@@ -548,6 +553,10 @@ export default {
 .box >>> .el-dialog .el-table th {
   padding: 3px 0;
   background: rgb(242, 242, 242);
+}
+.box>>>.el-table__body tr.current-row>td{
+  background-color: rgb(255, 136, 0) !important;
+  color: #fff;
 }
 .box >>> .el-dialog .el-table tr:hover {
   background-color: rgb(255, 136, 0) !important;

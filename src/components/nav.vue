@@ -185,9 +185,9 @@
             <span>上门服务管理</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="10-1">服务管理</el-menu-item>
-            <el-menu-item index="10-2">服务订单</el-menu-item>
-            <el-menu-item index="10-3">异常服务订单</el-menu-item>
+            <el-menu-item index="10-1" @click.native="fws">服务管理</el-menu-item>
+            <el-menu-item index="10-2" @click.native="fwws">服务订单</el-menu-item>
+            <el-menu-item index="10-3" @click.native="yicfw">异常服务订单</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -197,6 +197,21 @@
 <script>
 export default {
   methods: {
+    fwws(){
+        this.$router.push({
+            path:'/fuw',
+      });
+    },
+    yicfw(){
+       this.$router.push({
+            path:'/yicfw',
+      });
+    },
+    fws(){
+      this.$router.push({
+        path: "/fws",
+      });
+    },
     dzd(){
       this.$router.push({
         path: "/dzd",
